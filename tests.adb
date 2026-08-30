@@ -96,13 +96,13 @@ begin
          Put_Line ("     PASS");
    end;
 
-   -- TEST 12 - Unsigned_64 Popcount Identical
+   -- TEST 12 - Performance/Functional: U64 XOR Identical
    Put_Line ("TEST 12 - Performance/Functional: U64 XOR Identical");
    Put_Line ("  12.1 Assert popcount distance of same integer is 0");
    Assert (Distance (Unsigned_64'(16#FF00#), Unsigned_64'(16#FF00#)) = 0, "U64 identity failed");
    Put_Line ("     PASS");
 
-   -- TEST 13 - Unsigned_64 Popcount Distance
+   -- TEST 13 - Performance/Functional: U64 Binary distance calculation
    Put_Line ("TEST 13 - Performance/Functional: U64 Binary distance calculation");
    Put_Line ("  13.1 Assert distance between binary 1011 (11) and 0011 (3) is 1");
    Assert (Distance (Unsigned_64'(11), Unsigned_64'(3)) = 1, "U64 bitwise calculation failed");
@@ -117,7 +117,7 @@ begin
    -- TEST 15 - Hamming Weight Calculation
    Put_Line ("TEST 15 - Functional: Hamming Weight");
    Put_Line ("  15.1 Assert weight calculates distance from zero-vector (spaces)");
-   Assert (Weight ("ada is safe ") = 10, "Weight calculation failed");
+   Assert (Weight ("ada is safe ") = 9, "Weight calculation failed");
    Put_Line ("     PASS");
 
    Put_Line ("--------------------------------------------------------------");
