@@ -1,3 +1,6 @@
+with Interfaces;
+use type Interfaces.Unsigned_64;
+
 package body Hamming_Distance is
 
    -----------------------------------------------------
